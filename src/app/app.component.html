@@ -1,0 +1,47 @@
+<!-- <app-e2e-test></app-e2e-test> -->
+
+<app-header></app-header>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-recipes></app-recipes>
+      <app-shopping-list></app-shopping-list>
+    </div>
+  </div>
+</div> -->
+
+<!-- <app-new-students></app-new-students> -->
+<app-store></app-store>
+
+<div class="container">
+  <app-cockpit (serverCreated)="onServerAdded($event)"></app-cockpit>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element
+        *ngFor="let serverElement of serverCreated"
+        [element]="serverElement"
+      ></app-server-element>
+    </div>
+  </div>
+</div>
+
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="cool-xs-12">
+      <h4>Parent to Child @input:</h4>
+      <app-p-c></app-p-c>
+    </div>
+  </div>
+</div>
+
+<hr />
+<div class="div">
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Child to Parent @Output</h4>
+      <app-c-p></app-c-p>
+    </div>
+  </div>
+</div>

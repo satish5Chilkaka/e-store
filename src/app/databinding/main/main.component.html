@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-caa (newStudentDetails)="newStudentData($event)"></app-caa>
+      <div class="stident-data">
+        <p *ngFor="let s of newStudentRecords">
+          Student Name:{{ s.studentName }} <br />
+          Student Age: {{ s.studentAge }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

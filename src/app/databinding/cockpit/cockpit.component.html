@@ -1,0 +1,55 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label> Add server name</label>
+      <input type="text" class="form-control" [(ngModel)]="serverName" />
+      <label> Server content</label>
+      <input type="text" class="form-control" [(ngModel)]="serverBluePrint" />
+      &nbsp;
+
+      <button class="btn btn-primary" (click)="addServerName()">
+        Add server
+      </button>
+      &nbsp;
+      <button class="btn btn-primary" (click)="addServerBluePrint()">
+        Add server blueprint
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-default" *ngFor="let newServerName of serverNames">
+      <div class="panel-heading">{{ newServerName }}</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p *ngFor="let bluePrint of serverBluePrints">
+      {{ bluePrint }}
+    </p>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p>Add new Servers or blueprints!</p>
+      <label>Server type</label>
+      <input type="text" class="form-control" [(ngModel)]="newType" />
+      <label>Server Name</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerName" />
+      <label>Server Content</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerContent" />
+      <br />
+      <button class="btn btn-primary" (click)="onAddServer()">
+        Add Server
+      </button>
+      <button class="btn btn-primary" (click)="onAddBlueprint()">
+        Add Server Blueprint
+      </button>
+    </div>
+  </div>
+  <hr />
+</div>

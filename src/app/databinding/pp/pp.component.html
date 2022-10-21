@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-ca (newStudentName)="newAddedName($event)"></app-ca>
+      <div class="new-students">
+        <p *ngFor="let i of newName">
+          {{ i.sName }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

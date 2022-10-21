@@ -1,0 +1,24 @@
+<h2>New students:</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <label>Enter name:</label> &nbsp;
+    <input
+      type="text"
+      class="studentname"
+      id="studentName"
+      placeholder="Enter name"
+      [(ngModel)]="sName"
+    />
+    &nbsp;
+    <button
+      class="btn btn-primary"
+      (click)="addName()"
+      [disabled]="sName === ''"
+    >
+      Add student
+    </button>
+  </div>
+  <p *ngFor="let name of studentName">
+    <strong>{{ name }}</strong>
+  </p>
+</div>

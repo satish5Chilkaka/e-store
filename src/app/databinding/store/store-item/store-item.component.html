@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <p *ngFor="let i of storeItemName">
+        Name: {{ i.storeItemName }} <br />
+        ID: {{ i.storeItemId }} <br />
+        Quantity:
+        {{ i.storeItemQuantity }}
+      </p>
+    </div>
+  </div>
+</div>
+<hr />
+<h3>Store names</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <label>Store name:</label> <br />
+      <input type="text" class="store-name" [(ngModel)]="sName" />
+      <br />
+      <label>StoreID:</label> <br />
+      <input type="text" class="storeId" [(ngModel)]="sId" />
+      <br />
+      <label>Store Address:</label><br />
+      <input type="text" class="storeAddress" [(ngModel)]="sAddress" />
+      <br />
+      <button class="btn btn-primary" (click)="addStoreDetails()">
+        Add details
+      </button>
+    </div>
+  </div>
+</div>

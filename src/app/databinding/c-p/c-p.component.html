@@ -1,0 +1,17 @@
+<app-chi (storeItemName)="itemName($event)"></app-chi>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div *ngIf="newItemNames.length >= 1">
+        <strong>Items are:</strong>
+        <p *ngFor="let i of newItemNames">
+          {{ i.storeNewItemName }}
+        </p>
+        <ng-template #items>
+          <strong>New items</strong>
+        </ng-template>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<hr />
+<!-- Property binding [] -->
+<div class="container">
+  <div class="row">
+    <div class="col-xz-12">
+      <input type="checkbox" #testBox />
+      <button class="btn btn-primary" [disabled]="!allowNewServer">
+        Add Server
+      </button>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-xz-12">
+      <input type="checkbox" #testBox />
+      <button class="btn btn-primary" (input)="(!testBox)">
+        Add Server
+      </button>
+    </div>
+  </div>
+</div>
+
+<hr />
+<!-- Event binding () -->
+<div class="cards">
+  <div class="card">
+    <button class="btn btn-primary" (click)="onServerCreate()">
+      Add server
+    </button>
+    &nbsp;
+    <button class="btn btn-primary" (click)="onReset()">Reset server</button>
+  </div>
+  <p>{{ serverStatus }}</p>
+</div>
+
+<hr />
+<!-- Event binding () -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label> Server name</label>
+      <input
+        type="text"
+        class="form-control"
+        (input)="updateServerName($event)"
+      />
+      <p>New server name: {{ serverStatus }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <button type="button" (click)="dec()" title="smaller">-</button>
+  <button type="button" (click)="inc()" title="bigger">+</button>
+  <span [style.font-size.px]="size">FontSize: {{ size }}px</span>
+</div> -->
+<hr />
+<!-- TWO way binding -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label> New Server 1:</label>
+      <input type="text" class="form-control" [(ngModel)]="serverStatus" />
+    </div>
+    <div class="col-xs-12">
+      <label> New Server 2:</label>
+    </div>
+  </div>
+</div>

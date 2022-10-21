@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Add new name:</label>
+      <br />
+      <input
+        type="text"
+        class="addNewStudentName"
+        [(ngModel)]="addStudentName"
+      /><br />
+      <label> Age:</label> <br />
+      <input
+        type="number"
+        class="addNewStudentAge"
+        [(ngModel)]="addStudentAge"
+      /><br />
+      <button class="btn btn-primary" (click)="addStudentData()">
+        Add details
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<!-- Property binding (buttons or objects properties)
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" [disabled]="!addNewStudents">
+        Add student
+      </button>
+    </div>
+  </div>
+</div>
+
+<-- Event binding (input events, click events)-->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Add student name</label>
+      <input type="text" class="form-control" (input)="studentName($event)" />
+      <p>{{ newStudentName }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr />
+      <input type="text" class="form-contraol" (input)="studentName($event)" />
+      &nbsp;
+      <button class="btn btn-primary" [disabled]="newStudentName === ''">
+        Add new student
+      </button>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label> user name 1:</label>
+      <input type="text" class="form-control" (input)="userName($event)" />
+      <hr />
+      <label> User name</label>
+      <input type="text" class="form-control" [(ngModel)]="newUserName" />
+      <p>{{ newUserName }}</p>
+      <button class="btn btn-primary" [disabled]="newUserName === ''">
+        add new user
+      </button>
+      &nbsp;
+      <button
+        type="reset"
+        class="btn btn-primary"
+        [disabled]="newUserName === ''"
+        (click)="resetUserName()"
+      >
+        Reset user name
+      </button>
+    </div>
+  </div>
+</div>  -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <label> Student name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="studentName"
+        [(ngModel)]="sName"
+      />
+      <button class="btn btn-primary" id="addStudentName" (click)="addSName()">
+        New +
+      </button>
+      <p>
+        {{ studentStatus }}
+      </p>
+    </div>
+  </div>
+</div>

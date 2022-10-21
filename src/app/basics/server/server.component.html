@@ -1,0 +1,55 @@
+<!-- Directives are 3 types 1. component directive, structural directives, attribute directives  -->
+<!-- Structural directives  ngIf, ngFor, ngElse-->
+<!-- ngIf, ngElse -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Enter server name:</label>
+      <input type="text" class="form-control" [(ngModel)]="serverName" />
+      <button class="btn btn-primary" (click)="onCreateServer()">
+        Add server +
+      </button>
+      <p *ngIf="serverCreated; else noServer">
+        Server name: <strong> {{ serverName }}</strong>
+      </p>
+      <ng-template #noServer>
+        <p>
+          Server not created!
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<!-- ngFor -->
+
+<!-- Attribute directives : ngStyle, ngClass, ngModel-->
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p [ngStyle]="{ backgroundColor: serverColor() }">
+        Server status is: {{ serverStatus }}
+      </p>
+    </div>
+    <div class="col-xs-12">
+      <p [ngStyle]="{ 'background-color': serverColor() }">
+        Server status is: {{ serverStatus }}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- ngClass -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p
+        [ngClass]="{ online: serverStatus === 'Online' }"
+        [ngStyle]="{ backgroundColor: serverColor() }"
+        [ngClass]="{ offline: serverStatus === 'Offline' }"
+      >
+        Server status is: {{ serverStatus }}
+      </p>
+    </div>
+  </div>
+</div>

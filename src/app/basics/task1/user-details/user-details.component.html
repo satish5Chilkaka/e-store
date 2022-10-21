@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="flex flex-row">
+    <div class="flex flex-colß">
+      <button
+        class="btn btn-primary"
+        (click)="showPassword = !showPassword"
+        (click)="getCount()"
+        (click)="count = count + 1"
+      >
+        Display Details
+      </button>
+      <p *ngIf="showPassword">
+        {{ newPassword }}
+      </p>
+      <p
+        *ngFor="let clickCounts of numberOfClicks; let i = index"
+        [ngStyle]="{
+          'background-color': i >= 4 ? 'green' : 'light-blue'
+        }"
+      >
+        {{ clickCounts }}
+      </p>
+    </div>
+  </div>
+</div>

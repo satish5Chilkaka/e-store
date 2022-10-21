@@ -1,0 +1,4 @@
+DataBinding: Data transfer between components 
+
+1. Data transfer between Parent -> Child
+2. Data transfer between Child -> Parent 

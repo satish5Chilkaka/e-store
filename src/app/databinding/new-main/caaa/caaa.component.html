@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Server Name:</label>
+      <input type="text" class="server-name" [(ngModel)]="sName" />
+      <br />
+      <label>Server ID:</label>
+      <input type="text" class="server-id" [(ngModel)]="sId" />
+      <br />
+      <label>Server Type</label>
+      <input type="text" class="server-type" [(ngModel)]="sType" />
+      <br />
+      <button class="btn btn-primary" (click)="addServerContent()">
+        Add server
+      </button>
+    </div>
+  </div>
+</div>

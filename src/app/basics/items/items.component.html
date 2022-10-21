@@ -1,0 +1,18 @@
+<div class="flex flex-row">
+  <div class="flex flex-col">
+    <label>Item name</label>
+    <input type="text" class="form-control" [(ngModel)]="itemName" />
+    <button
+      class="btn btn-primary"
+      (click)="count = count + 1"
+      (click)="addItem()"
+    >
+      Add Item
+    </button>
+    <p [ngStyle]="{ 'background-color': itemColour() }">
+      New item name is <strong>{{ itemNames }}</strong>
+    </p>
+  </div>
+</div>
+
+<app-new-iteam *ngFor="let server of itemNames"></app-new-iteam>

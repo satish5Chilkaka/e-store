@@ -1,0 +1,13 @@
+<!-- <app-store-item [storeItemName]="storeItemsList"></app-store-item> -->
+<app-store-item (storeNames)="storeDetials($event)"> </app-store-item>
+<div class="container">
+  <div class="row">
+    <div *ngIf="stores.length >= 1" class="card">
+      <p *ngFor="let s of stores">
+        Name:{{ s.storeName }} <br />
+        Id: {{ s.storeId }}<br />
+        Address: {{ s.storeAddress }}
+      </p>
+    </div>
+  </div>
+</div>

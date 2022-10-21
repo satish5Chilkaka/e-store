@@ -1,0 +1,7 @@
+<app-caaa (newServerInfo)="addServerInfo($event)"></app-caaa>
+<p *ngFor="let i of serverRecords">
+  server name: {{ i.serverName }} <br />
+  server id: {{ i.serverId }} <br />
+  server type:
+  {{ i.serverType }}
+</p>
